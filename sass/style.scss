@@ -13,10 +13,6 @@ html {
 }
 
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 	font-family: 'Red Hat Text', sans-serif;
 	font-size: 1.8rem;
 	background-color: $Rose-100;
@@ -37,7 +33,7 @@ main {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
-	padding: 40px;
+	padding: 40px 40px 20px 0;
 }
 
 ///////////////////
@@ -45,9 +41,16 @@ main {
 //////////////////
 
 @media (max-width: 1400px) {
-    h1 {
-        text-align: center;
-    }
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	h1 {
+		text-align: center;
+	}
 	.container {
 		grid-template-columns: 1fr;
 	}
@@ -56,6 +59,7 @@ main {
 	.products-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		padding: 20px;
 	}
 }
 @media (max-width: 650px) {

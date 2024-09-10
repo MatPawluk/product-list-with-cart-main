@@ -63,7 +63,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 100%;
   gap: 20px;
   background: hsl(20, 50%, 98%);
   height: -moz-fit-content;
@@ -146,10 +145,6 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   font-family: "Red Hat Text", sans-serif;
   font-size: 1.8rem;
   background-color: hsl(13, 31%, 94%);
@@ -170,10 +165,16 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding: 40px;
+  padding: 40px 40px 20px 0;
 }
 
 @media (max-width: 1400px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
   h1 {
     text-align: center;
   }
@@ -185,6 +186,7 @@ main {
   .products-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 20px;
   }
 }
 @media (max-width: 650px) {
