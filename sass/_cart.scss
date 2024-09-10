@@ -63,7 +63,7 @@
 	}
 
 	.order-total {
-		display: flex;
+		display: none;
 		justify-content: space-between;
 		align-items: center;
 
@@ -73,6 +73,7 @@
 		}
 	}
 	.confirm-order {
+		display: none;
 		padding: 15px;
 		border: none;
 		border-radius: 30px;
@@ -86,10 +87,14 @@
 			background-color: rgba($color: $Red, $alpha: 1);
 		}
 	}
+
+	.no-items {
+		text-align: center;
+		font-weight: 600;
+		color: $Rose-500;
+		img {
+			width: 50%;
+		}
+	}
 }
 
-// @media (max-width: 1400px) {
-// 	.cart {
-//         min-width: 480px;
-// 	}
-// }

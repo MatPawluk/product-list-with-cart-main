@@ -1,6 +1,7 @@
 @use './colors' as *;
 @use './product' as *;
 @use './cart' as *;
+@use './modal' as *;
 
 * {
 	margin: 0;
@@ -34,6 +35,10 @@ main {
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
 	padding: 40px 40px 20px 0;
+}
+
+.dnone {
+	display: none;
 }
 
 ///////////////////

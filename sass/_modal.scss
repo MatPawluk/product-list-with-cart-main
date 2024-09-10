@@ -1,0 +1,114 @@
+@use './colors' as *;
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	border-radius: 20px;
+
+	&.show {
+		display: block;
+	}
+
+	.confirmed {
+		width: 30px;
+	}
+
+	h2 {
+		font-size: 5rem;
+	}
+
+	.summary {
+		background-color: $Rose-100;
+		border-radius: 8px;
+		padding: 10px;
+		margin-block: 20px;
+		font-size: 1.6rem;
+
+		.order-total {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-block-start: 10px;
+
+			&--value {
+				font-size: 2.5rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+.modal-open {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.cart-item__image {
+	width: 65px;
+	border-radius: 8px;
+}
+
+.item-description {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+	&__right {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.item-details-container {
+	display: flex;
+	gap: 10px;
+}
+
+.item-name {
+	font-weight: 600;
+}
+
+.item-quantity {
+	color: $Red;
+	font-weight: 600;
+}
+
+.item-price-total {
+	font-weight: 600;
+}
+
+.start-new-order {
+	padding: 15px;
+	border: none;
+	width: 100%;
+	border-radius: 30px;
+	background-color: rgba($color: $Red, $alpha: 0.8);
+	font-size: 1.8rem;
+	color: $Rose-50;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: rgba($color: $Red, $alpha: 1);
+	}
+}
