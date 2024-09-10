@@ -1,0 +1,90 @@
+@use './colors' as *;
+
+.cart {
+	position: sticky;
+	top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 100%;
+	gap: 20px;
+	background: $Rose-50;
+	height: fit-content;
+	padding: 20px;
+	border-radius: 20px;
+
+	&-title {
+		color: $Red;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 100%;
+		border-bottom: 1px solid $Rose-300;
+		padding: 20px 0;
+
+		&__description {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+
+			&-title {
+				font-weight: 600;
+			}
+
+			&-details {
+				display: flex;
+				gap: 15px;
+				color: $Rose-500;
+
+				&--counter {
+					color: $Red;
+					font-weight: 600;
+				}
+
+				&--price-total {
+					font-weight: 600;
+				}
+			}
+		}
+
+		&__remove {
+			cursor: pointer;
+			padding: 10px;
+			color: $Rose-400;
+			font-size: 2.5rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $Rose-900;
+			}
+		}
+	}
+
+	.order-total {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--value {
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+	}
+	.confirm-order {
+		padding: 15px;
+		border: none;
+		border-radius: 30px;
+		background-color: rgba($color: $Red, $alpha: 0.8);
+		font-size: 1.8rem;
+		color: $Rose-50;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: rgba($color: $Red, $alpha: 1);
+		}
+	}
+}

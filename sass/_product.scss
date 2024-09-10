@@ -1,0 +1,71 @@
+@use './colors' as *;
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	max-width: 280px;
+
+	//IMG AND BUTTON ADD TO CART
+	.image {
+		border-radius: 15px;
+		width: 280px;
+		height: 280px;
+		background-image: url('../assets/images/image-baklava-desktop.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+
+		.add-to-cart {
+			position: absolute;
+			padding: 10px 0;
+			width: 170px;
+			border-radius: 35px;
+			border: 1px solid $Rose-500;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			font-weight: 600;
+			cursor: pointer;
+			transition: color 0.3s, border 0.3s;
+
+			i {
+				font-size: 20px;
+			}
+
+			&:hover {
+				color: $Red;
+				border: 1px solid $Red;
+			}
+		}
+	}
+
+	// PRODUCKT SHORT DESCRIPTION
+
+	&__details {
+		display: flex;
+		flex-direction: column;
+		align-self: start;
+		gap: 5px;
+
+		.category {
+			font-size: 1.6rem;
+			font-weight: 300;
+			color: $Rose-400;
+		}
+
+		.name {
+			font-size: 2rem;
+			font-weight: 600;
+			color: $Rose-900;
+		}
+
+		.price {
+			font-size: 2rem;
+			font-weight: 600;
+			color: $Red;
+		}
+	}
+}
